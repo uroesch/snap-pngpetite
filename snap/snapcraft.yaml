@@ -1,0 +1,33 @@
+name: pngpetite
+version: "0.1.0"
+summary: Make PNG files as petite as possible
+description: |
+  A script to reduce the size of PNG images significantly.
+  The code is based on Crush by Christopher Simpkins and
+  has been adapted to Linux by refactoring it. As the code
+  base shows significant differences the name has also been
+  changed.
+
+grade: devel
+confinement: devmode
+base: core18
+
+parts:
+  zopflipng:
+    plugin: dump 
+    source: https://github.com/uroesch/linux-packages/raw/master/xenial/z/zopflipng_1.0.1-1_amd64.deb
+    source-type: deb
+  pngpetite:
+    source: https://github.com/uroesch/pngpetite.git
+    plugin: dump
+    source-type: git
+    stage-packages:
+      - libreadline6
+      - bc
+      - pngquant
+    build-packages:
+      - git
+apps:
+  pngpetite:
+    command: |
+      bin/pngpetite

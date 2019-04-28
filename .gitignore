@@ -1,0 +1,6 @@
+prime
+parts
+stage
+snap/.snapcraft
+*.snap
+**.pyc
