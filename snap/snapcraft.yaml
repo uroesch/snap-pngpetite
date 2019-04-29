@@ -13,10 +13,6 @@ confinement: devmode
 base: core18
 
 parts:
-  zopflipng:
-    plugin: dump 
-    source: https://github.com/uroesch/linux-packages/raw/master/xenial/z/zopflipng_1.0.1-1_amd64.deb
-    source-type: deb
   pngpetite:
     source: https://github.com/uroesch/pngpetite.git
     plugin: dump
@@ -25,6 +21,7 @@ parts:
       - libreadline7
       - bc
       - pngquant
+      - zopfli
     build-packages:
       - git
 apps:
