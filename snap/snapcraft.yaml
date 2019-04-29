@@ -22,7 +22,7 @@ parts:
     plugin: dump
     source-type: git
     stage-packages:
-      - libreadline6
+      - libreadline7
       - bc
       - pngquant
     build-packages:
