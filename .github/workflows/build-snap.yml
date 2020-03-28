@@ -1,0 +1,26 @@
+# -----------------------------------------------------------------------------
+# Build workflow for snaps
+# Author: Urs Roesch https://github.com/uroesch
+# Version: 0.0.1 
+# -----------------------------------------------------------------------------
+name: build-snap
+
+on:
+  push:
+    branches: 
+    - workflow/*
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build-package:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build snap 
+      uses: jhenstridge/snapcraft-build-action@v1
