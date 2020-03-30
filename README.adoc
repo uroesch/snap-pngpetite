@@ -6,12 +6,18 @@
 :email:     github@bun.ch
 :revnumber: 0.1.0
 :keywords:  snap, snapcraft, shell, bash, png, pngquant, zopflipng
-:toc:       left
 :icons:     font
+:!toc: 
 
-https://github.com/uroesch/pngpetite[Pngpetite] is a script to reduce the size of PNG images significantly. The code is based on Crush by Christopher Simpkins and has been adapted to Linux by refactoring it. As the code base shows significant differences the name has also been changed.
+https://github.com/uroesch/snap-pngpetite/actions?query=workflow%3Abuild-snap[image:https://github.com/uroesch/snap-pngpetite/workflows/build-snap/badge.svg[]]
 
-NOTE: The snap is in alpha state and may not work as intended. As such it is
+https://github.com/uroesch/pngpetite[Pngpetite] is a script to reduce the 
+size of PNG images significantly. The code is based on Crush by 
+Christopher Simpkins and has been adapted to Linux by refactoring 
+it. As the code base shows significant differences the name has also 
+been changed.
+
+NOTE: The snap is in beta state and may not work as intended. As such it is
   provided as is!
 
 [[build]]
@@ -19,7 +25,7 @@ NOTE: The snap is in alpha state and may not work as intended. As such it is
 [source,bash]
 ----
 git clone https://github.com/uroesch/snap-pngpetite.git
-cd snap-petite
+cd snap-pngpetite
 snapcraft
 ----
 
