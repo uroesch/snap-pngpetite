@@ -1,5 +1,5 @@
 name: pngpetite
-version: "0.2.0"
+version: "0.2.2"
 summary: Make PNG files as petite as possible
 description: |
   A script to reduce the size of PNG images significantly.
@@ -17,10 +17,11 @@ parts:
     source: https://github.com/uroesch/pngpetite.git
     plugin: dump
     source-type: git
-    source-tag: v0.2.0
+    source-tag: v0.2.2
     stage-packages:
       - libreadline7
       - bc
+      - file
       - pngquant
       - zopfli
     build-packages:
