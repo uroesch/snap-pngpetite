@@ -8,8 +8,8 @@ description: |
   base shows significant differences the name has also been
   changed.
 
-grade: devel
-confinement: devmode
+grade: stable
+confinement: strict
 base: core18
 
 parts:
